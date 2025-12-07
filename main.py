@@ -26,7 +26,29 @@ def caesar_decrypt(text, shift):
 # Password strength checker function (optional)
 def is_strong_password(password):
     # ...
+if len(password) < 8: 
+    return False
 
+contains_lower = False
+contains_upper = False
+contains_digit = False
+contains_special = False
+
+for char in password: 
+    if char.islower(): 
+        contains_lower = True
+    elif char.isupper(): 
+        contains_upper = True
+    elif char.isdigit():
+        contais_digit = True
+    elif char in string.punctuation: 
+        contains_special = True
+
+if contains_lower and contains_upper and contains_digit and contains_special: 
+    return True
+else: 
+    return False 
+    
 # Password generator function (optional)
 def generate_password(length):
      """
@@ -38,6 +60,8 @@ def generate_password(length):
     Returns:
         str: A random strong password.
     """
+
+
 
 # Initialize empty lists to store encrypted passwords, websites, and usernames
 encrypted_passwords = []
