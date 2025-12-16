@@ -57,7 +57,7 @@ def generate_password(length):
 encrypted_passwords = []
 websites = []
 usernames = []
-SHIT = 3
+SHIFT = 3
 # Function to add a new password 
 def add_password():
     website = input("Enter website: ")
