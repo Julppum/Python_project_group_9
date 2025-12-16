@@ -38,7 +38,7 @@ def is_strong_password(password):
         elif char.isupper(): 
             contains_upper = True
         elif char.isdigit():
-            contais_digit = True
+            contains_digit = True
         elif char in string.punctuation: 
             contains_special = True
     if contains_lower and contains_upper and contains_digit and contains_special: 
@@ -57,7 +57,7 @@ def generate_password(length):
 encrypted_passwords = []
 websites = []
 usernames = []
-
+SHIT = 3
 # Function to add a new password 
 def add_password():
     website = input("Enter website: ")
@@ -95,7 +95,6 @@ def get_password():
     else:
         print("Website not found.")
 
-# Function to save passwords to a JSON file 
 def save_passwords():
     data = {
         "websites": websites,
@@ -132,9 +131,8 @@ def load_passwords():
         
   # Main method
 def main():
-# implement user interface 
-
-  while True:
+    # implement user interface 
+    while True:
     print("\nPassword Manager Menu:")
     print("1. Add Password")
     print("2. Get Password")
@@ -151,7 +149,7 @@ def main():
     elif choice == "3":
         save_passwords()
     elif choice == "4":
-        passwords = load_passwords()
+        load_passwords()
         print("Passwords loaded successfully!")
     elif choice == "5":
         break
